@@ -1,3 +1,9 @@
+:root{
+  --lightBlue: #69DDFF;
+  --mainYellow: #FFD700;
+  --mainDark: #232528;
+}
+
 .App {
   text-align: center;
 }
@@ -28,6 +34,35 @@
   color: #61dafb;
 }
 
+.App-background{
+  background-color: #282c34;
+}
+
+
+.btn-black{
+  background :transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+  color: var(--mainDark);
+  border-radius: 0 !important;
+  border: 0.1rem solid var(--mainDark) !important;
+}
+
+.btn-black:hover{
+  background: var(--mainDark) !important;
+  color: white !important;
+}
+
+.cart-icon{
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--mainYellow);
+}
+
+.cart-icon:hover{
+  color: red;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +71,4 @@
     transform: rotate(360deg);
   }
 }
+

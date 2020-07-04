@@ -1,24 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+
+//Components
+import {NavigationBar} from './components/Navbar.js';
+import Title from './components/Title.js';
+import ShoppingCart from './components/Cart';
+import ProductList from "./components/ProductList.js";
+import ProductDetails from "./components/ProductDetails.js";
+import Hero from "./components/Hero.js";
+import Modal from "./components/Modal.js";
+import Default from "./components/Default.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className = "">
+      <React.Fragment>
+        
+        <NavigationBar />
+          <Switch>
+            <Route exact path = "/" render = { props =>
+              <div>
+                <Hero/>
+                <ProductList/>
+              </div> 
+            }/>
+
+
+            <Route path = "/details" component = {ProductDetails}/>
+            <Route path = "/cart" component = {ShoppingCart}/>
+            <Route component = {Default}/>
+          </Switch>
+
+          <Modal/>
+      </React.Fragment>
     </div>
   );
 }
