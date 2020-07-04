@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {Route, Switch } from "react-router-dom";
 
 
 //Components
 import {NavigationBar} from './components/Navbar.js';
-import Title from './components/Title.js';
 import ShoppingCart from './components/Cart';
 import ProductList from "./components/ProductList.js";
 import ProductDetails from "./components/ProductDetails.js";

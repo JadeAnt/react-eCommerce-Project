@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Product from './Product.js';
 import Title from './Title.js';
-import {storeProducts, detailProduct} from '../Data.js';
+import {storeProducts} from '../Data.js';
 import {ProductConsumer} from '../context.js';
 
 export default class ProductList extends React.Component{

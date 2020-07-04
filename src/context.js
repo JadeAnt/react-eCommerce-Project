@@ -1,4 +1,4 @@
-import React, { isValidElement } from 'react';
+import React from 'react';
 import {storeProducts, detailProduct} from './Data.js';
 
 const ProductContext = React.createContext();
@@ -104,7 +104,7 @@ class ProductProvider extends React.Component{
         const selectedProduct = tempCart.find(item => item.id === id);
         const index = tempCart.indexOf(selectedProduct);
         const product = tempCart[index];
-        
+
         product.count = product.count - 1;
 
         if(product.count === 0){
