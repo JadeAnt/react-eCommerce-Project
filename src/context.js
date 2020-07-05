@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {storeProducts, detailProduct} from './Data.js';
 
 const ProductContext = React.createContext();
 
-class ProductProvider extends React.Component{
+class ProductProvider extends Component{
     state = {
         products: [],
         detailProduct: detailProduct,
@@ -104,7 +104,7 @@ class ProductProvider extends React.Component{
         const selectedProduct = tempCart.find(item => item.id === id);
         const index = tempCart.indexOf(selectedProduct);
         const product = tempCart[index];
-
+        
         product.count = product.count - 1;
 
         if(product.count === 0){
@@ -151,7 +151,6 @@ class ProductProvider extends React.Component{
             }, 
             
             () => {
-                this.setProducts();
                 this.addTotals();
             }
         );

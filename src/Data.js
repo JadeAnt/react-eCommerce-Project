@@ -25,7 +25,7 @@ export const storeProducts = [
 
     {
         id: 3,
-        title: "Noise Cancelling Headphones",
+        title: "Noise Cancelling",
         img: "img/noise_cancel_headphones.png",
         price: 20,
         company: "Intel",
@@ -61,7 +61,7 @@ export const storeProducts = [
 
     {
         id: 6,
-        title: "BackBeat Go Headphones",
+        title: "BackBeat Go",
         img: "img/backbeat-go.png",
         price: 35,
         company: "Apple",

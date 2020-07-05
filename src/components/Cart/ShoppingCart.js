@@ -23,14 +23,13 @@ export default class ShoppingCart extends React.Component{
                                         <Title name = "your " title = "cart"/>
                                         <CartColumns/>
                                         <CartList value = {value} />
-                                        <CartTotals value = {value}/>
+                                        <CartTotals value = {value} history = {this.props.history}/>
                                     </React.Fragment>
                                 );
                             }
                             else{
-                                return(
-                                    <EmptyCart/>
-                                );
+                                return <EmptyCart/>;
+                                
                             }
                         }
                     }

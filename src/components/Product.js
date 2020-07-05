@@ -33,7 +33,8 @@ export default class Product extends React.Component {
                                         (
                                             <p className = "text-capitalize mb-0" disabled>
                                                 {" "}
-                                                In Cart
+                                                <Link to = "/cart" style = {{textDecoration: "none"}}>In Cart</Link>
+                                                
                                             </p>
                                         ):(
                                             <i className = "fa fa-cart-plus fa-2x"/>
@@ -47,9 +48,9 @@ export default class Product extends React.Component {
 
                     {/*card footer*/}
                     <div className = "card-footer d-flex justify-content-between">
-                        <p className = "align-self-center mb-0">
+                        <h4 className = "align-self-center mb-0">
                             {title}
-                        </p>
+                        </h4>
                         <h5 className = "text-blue font-italic mb-0">
                             <span className = "mr-1">$</span>
                             {price}
@@ -101,8 +102,8 @@ const ProductWrapper = styled.div`
     }
     .img-container{
         
-        width: 350px;
-        height: 350px;
+        width: 330px;
+        height: 330px;
         object-fit: cover;
         position: relative;
         overflow: hidden;
@@ -124,7 +125,7 @@ const ProductWrapper = styled.div`
         font-size: 1.4rem;
         border-radius: 1.4rem 0 0 0;
 
-        transform: translate(100%, 100%);
+        transform: translate(0, 100%);
         transition: all 250ms linear;
     }
     .img-container:hover .cart-btn{
